@@ -57,12 +57,11 @@ kind: Service
 metadata:
   name: flaskapp
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: flaskapp
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8000
-      nodePort: 31000
 
